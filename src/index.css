@@ -1,0 +1,16 @@
+.dropdown-content {
+    float: left;
+    overflow: hidden;
+}
+.dropdown {
+    padding-top: 10px;
+}
+#red {
+    color: red;
+}
+#green {
+    color: green;
+}
+#blue {
+    color:blue;
+}
