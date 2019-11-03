@@ -31,7 +31,7 @@ const reducer = (state = initialState, action) => {
     if (type === "PICKCOLOR") {
         console.log("Your color choice is", pickColor.value)
         return {
-            color: state.color
+            value: state.value
         }
     }
     return state
