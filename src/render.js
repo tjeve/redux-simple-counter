@@ -1,7 +1,5 @@
 const render = (state) => {
     const counterDOM = document.getElementById('counterValue');
-    // console.log("render.js line 3. state.value =", state.value)
-    // counterDOM.innerHTML = state.value
     counterDOM.innerHTML = `<div style="color: ${pickColor.value}">${state.value}</div>`
     
     

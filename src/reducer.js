@@ -1,6 +1,10 @@
-const initialState = {
+let initialState = {
     value: 0,
     color: "black"
+}
+
+function deepcopy (x) {
+    return JSON.parse(JSON.stringify(x))
 }
 
 const reducer = (state = initialState, action) => {
@@ -32,6 +36,12 @@ const reducer = (state = initialState, action) => {
         console.log("Your color choice is", pickColor.value)
         return {
             value: state.value
+        }
+    }
+    if (type === "PICK_STARTING_NUMBER") {
+        console.log("Your starting number is", pickStartingNumber )
+        return {
+            value: pickStartingNumber.value
         }
     }
     return state
