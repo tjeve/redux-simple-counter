@@ -22,3 +22,7 @@ incrementBy5Button.addEventListener('click', e => dispatch({ type: "INCREMENT_BY
 // Dispatch the "DECREMENT_BY_5" action every time the - 5 button is pressed
 const decrementBy5Button = document.getElementById("decrement-by-5");
 decrementBy5Button.addEventListener('click', e => dispatch({ type: "DECREMENT_BY_5" }));
+
+// Dispatch the "PICKCOLOR" action every time a color is chosen from the dropdown menu
+const pickColor = document.getElementById("pick-color")
+pickColor.addEventListener("change", e => dispatch({ type: "PICKCOLOR", color: pickColor.value }))

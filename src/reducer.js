@@ -1,5 +1,6 @@
 const initialState = {
-    value: 0
+    value: 0,
+    color: "black"
 }
 
 const reducer = (state = initialState, action) => {
@@ -24,8 +25,15 @@ const reducer = (state = initialState, action) => {
             value: state.value - 5
         }
     }
-    // if (type === "RED") {
-    //     //Changes the Color of the counter
-    //     }
+    // You want to change the color of the counter to the color that was selected
+    // Diagram the cycle of events and see what is happening where on a sheet of paper
+    // ...when you get home
+    if (type === "PICKCOLOR") {
+        console.log("Your color choice is", pickColor.value)
+        return {
+            color: state.color
+        }
+    }
     return state
 }
+
