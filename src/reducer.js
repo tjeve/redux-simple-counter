@@ -39,7 +39,7 @@ const reducer = (state = initialState, action) => {
         }
     }
     if (type === "PICK_STARTING_NUMBER") {
-        console.log("Your starting number is", pickStartingNumber )
+        console.log("Your starting number is", pickStartingNumber.value )
         return {
             value: pickStartingNumber.value
         }
