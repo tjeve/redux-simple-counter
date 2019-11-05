@@ -11,22 +11,23 @@ const reducer = (state = initialState, action) => {
     let { type } = action;
     if (type === "INCREMENT") {
         return {
-            value: state.value + 1
+            value: deepcopy(state.value) + 1
         }
     }
     if (type === "DECREMENT") {
         return {
-            value: state.value - 1
+            value: deepcopy(state.value) - 1
         }
     }
     if (type === "INCREMENT_BY_5") {
         return {
-            value: state.value + 5
+            value: deepcopy(state.value) + 5
         }
     }
     if (type === "DECREMENT_BY_5") {
+        console.log(typeof state.value)
         return {
-            value: state.value - 5
+            value: deepcopy(state.value) - 5
         }
     }
     // You want to change the color of the counter to the color that was selected
@@ -39,9 +40,10 @@ const reducer = (state = initialState, action) => {
         }
     }
     if (type === "PICK_STARTING_NUMBER") {
-        console.log("Your starting number is", pickStartingNumber.value )
+        console.log("Your starting number is", deepcopy(pickStartingNumber.value))
+        console.log(typeof pickStartingNumber.value)
         return {
-            value: pickStartingNumber.value
+            value: parseInt(pickStartingNumber.value) //parseInt parses the string as a number
         }
     }
     return state
