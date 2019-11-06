@@ -40,12 +40,19 @@ const reducer = (state = initialState, action) => {
         }
     }
     if (type === "PICK_STARTING_NUMBER") {
-        console.log("Your starting number is", deepcopy(pickStartingNumber.value))
-        console.log(typeof pickStartingNumber.value)
+        console.log("Your starting number is", deepcopy(parseInt(pickStartingNumber.value)))
+        console.log(typeof deepcopy(parseInt(pickStartingNumber.value)))
         return {
-            value: parseInt(pickStartingNumber.value) //parseInt parses the string as a number
+            value: deepcopy(parseInt(pickStartingNumber.value)) //parseInt parses the string as a number
         }
     }
+    // if (type === "ADD_COUNTER") {
+    //     console.log("The counter is reading")
+    //     const newCounter = {
+    //         count: 0,
+    //         id: state.length
+    //     }
+    // }
     return state
 }
 
