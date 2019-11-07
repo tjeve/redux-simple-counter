@@ -21,4 +21,4 @@ Add the features below one at a time. For each feature, you might find yourself 
 ### BONUS CHALLENGE
 Try adding a "+1 counter" button that adds more counters to the screen. Each counter should have its own buttons that increment/decrement its value
 
-* This project was copied from Adam Szaranga
+* This project was copied from Adam Szaranga's project of the same name.
